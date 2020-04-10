@@ -1,2 +1,98 @@
-<!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="container">
+  <!-- 搜索 和 轮播 部分 -->
+  <view class="search_swiper">
+    <view class="foods_search_swiper">
+      <!-- 搜索部分 -->
+      <view class="search_box">
+        <text class="iconfont icon-sousuo"></text>
+        <navigator class="search" target="" url="/pages/search/search">
+          今天想吃什么
+        </navigator>
+      </view>
+
+      <!-- 轮播部分  -->
+      <view class="foods_swiper">
+        <swiper class="swiper" autoplay interval="3000" circular indicator-dots="true" indicator-color="#000" indicator-active-color="#2ecc71">
+          <swiper-item class="swiper_item">
+            <navigator class="swiper_navigator" url="">
+              <image lazy-load mode="scaleToFill" src="http://img3.imgtn.bdimg.com/it/u=2935226822,3932209253&fm=15&gp=0.jpg" />
+            </navigator>
+                
+          </swiper-item>
+          <swiper-item class="swiper_item">
+            <navigator class="swiper_navigator" url="">
+              <image lazy-load mode="scaleToFill" src="http://img4.imgtn.bdimg.com/it/u=3659355905,4147519143&fm=11&gp=0.jpg" />
+            </navigator>
+          </swiper-item>
+        </swiper>
+      </view>
+    </view>
+  </view>
+
+  <!-- 早餐 午餐 下午茶 晚餐 夜宵 部分 -->
+  <view class="oneday_foods">
+    <view class="oneday_item">
+      <iconfont class="zaocan" name="zaocan"></iconfont>
+      <text>早餐</text>
+    </view>
+    <view class="oneday_item">
+      <iconfont class="zongjingliwucan" name="zongjingliwucan"></iconfont>
+      <text>午餐</text>
+    </view>
+    <view class="oneday_item">
+      <iconfont class="icon_xiawucha" name="icon_xiawucha"></iconfont>
+      <text>下午茶</text>
+    </view>
+    <view class="oneday_item">
+      <iconfont class="dinner" name="dinner"></iconfont>
+      <text>晚餐</text>
+    </view>
+    <view class="oneday_item">
+      <iconfont class="yexiao" name="yexiao"></iconfont>
+      <text>夜宵</text>
+    </view>
+  </view>
+
+  <!-- 热门标签部分 -->
+  <view class="hot_foods">
+    <view class="hot_title_more">
+        <view class="title">
+          热门标签
+          <iconfont class="remen1" name="remen1"></iconfont>
+        </view>
+        <view class="more">查看更多>></view>
+    </view>
+    <view class="hot_items">
+        <scroll-view class="hot_image" scroll-x>
+            <view class="hot_item">
+                <image src="http://api.jisuapi.com/recipe/upload/20160720/100358_85297.jpg"></image>
+                <text>家常菜</text>
+            </view>
+            <view class="hot_item">
+                <image src="http://api.jisuapi.com/recipe/upload/20160720/100358_85297.jpg"></image>
+                <text>家常菜</text>
+            </view>
+            <view class="hot_item">
+                <image src="http://api.jisuapi.com/recipe/upload/20160720/100358_85297.jpg"></image>
+                <text>家常菜</text>
+            </view>
+            <view class="hot_item">
+                <image src="http://api.jisuapi.com/recipe/upload/20160720/100358_85297.jpg"></image>
+                <text>家常菜</text>
+            </view>
+            <view class="hot_item">
+                <image src="http://api.jisuapi.com/recipe/upload/20160720/100358_85297.jpg"></image>
+                <text>家常菜</text>
+            </view>
+            <view class="hot_item">
+                <image src="http://api.jisuapi.com/recipe/upload/20160720/100358_85297.jpg"></image>
+                <text>家常菜</text>
+            </view>
+            <view class="hot_item">
+                <image src="http://api.jisuapi.com/recipe/upload/20160720/100358_85297.jpg"></image>
+                <text>家常菜</text>
+            </view>
+        </scroll-view>
+    </view>
+  </view>
+</view>

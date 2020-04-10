@@ -8,9 +8,36 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarTitleText": "PowerFoods",
     "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "iconfont": "/iconfont/iconfont"
+  },
+  "tabBar": {
+    "color": "#373737",
+    "selectedColor": "#FD6061",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/assets/tarbarImg/shouye.png",
+      "selectedIconPath": "/assets/tarbarImg/shouye-active.png"
+      },
+      {
+        "pagePath": "pages/menus/menus",
+        "text": "菜单",
+        "iconPath": "/assets/tarbarImg/grid.png",
+        "selectedIconPath": "/assets/tarbarImg/grid-active-copy.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/assets/tarbarImg/mine.png",
+        "selectedIconPath": "/assets/tarbarImg/mine-active.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

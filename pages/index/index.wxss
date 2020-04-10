@@ -1,1 +1,130 @@
-/* pages/index/index.wxss */
+.container .search_swiper {
+  position: relative;
+  width: 100vw;
+  height: 470rpx;
+  box-sizing: border-box;
+}
+.container .search_swiper .foods_search_swiper {
+  width: 100%;
+  height: 80%;
+  background-color: #e74c3c;
+}
+.container .search_swiper .foods_search_swiper .search_box {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 85%;
+  height: 60rpx;
+  border-radius: 60rpx;
+  margin: 40rpx 60rpx;
+  background-color: #fff;
+}
+.container .search_swiper .foods_search_swiper .search_box .icon-sousuo {
+  font-size: 32rpx;
+  color: #CACACA;
+  padding: 0 20rpx;
+}
+.container .search_swiper .foods_search_swiper .search_box .search {
+  font-size: 28rpx;
+  color: #CACACA;
+}
+.container .search_swiper .foods_search_swiper .foods_swiper {
+  position: absolute;
+  width: 90%;
+  height: 280rpx;
+  bottom: 10%;
+  left: 5%;
+}
+.container .search_swiper .foods_search_swiper .foods_swiper .swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+  overflow: hidden;
+  transform: translateY(0);
+}
+.container .search_swiper .foods_search_swiper .foods_swiper .swiper .swiper_item {
+  border-radius: 20rpx;
+}
+.container .search_swiper .foods_search_swiper .foods_swiper .swiper .swiper_item .swiper_navigator {
+  width: 100%;
+  height: 100%;
+}
+.container .search_swiper .foods_search_swiper .foods_swiper .swiper .swiper_item .swiper_navigator image {
+  width: 100%;
+  height: 100%;
+}
+.container .oneday_foods {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+  height: 120rpx;
+  margin: 0 auto;
+}
+.container .oneday_foods .oneday_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .oneday_foods .oneday_item text {
+  font-size: 26rpx;
+}
+.container .hot_foods {
+  width: 100vw;
+  height: 300rpx;
+  padding-top: 20rpx;
+}
+.container .hot_foods .hot_title_more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.container .hot_foods .hot_title_more .title {
+  display: flex;
+  padding-left: 20rpx;
+  font-size: 32rpx;
+}
+.container .hot_foods .hot_title_more .more {
+  padding-right: 20rpx;
+  font-size: 26rpx;
+  color: #CACACA;
+}
+.container .hot_foods .hot_items {
+  height: 252rpx;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 20rpx 0;
+}
+.container .hot_foods .hot_items .hot_image {
+  width: auto;
+  overflow: hidden;
+  height: 100%;
+}
+.container .hot_foods .hot_items .hot_image .hot_item {
+  width: 30%;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  padding: 0 10rpx;
+}
+.container .hot_foods .hot_items .hot_image .hot_item image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+.container .hot_foods .hot_items .hot_image .hot_item text {
+  position: absolute;
+  width: 120rpx;
+  height: 40rpx;
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 26rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  left: 5%;
+  bottom: 5%;
+}
