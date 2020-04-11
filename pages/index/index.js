@@ -1,18 +1,43 @@
-// pages/index/index.js
+import {getIndexSwiperData} from "../../logic/ajax_api.js"
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    // 状态码
+    statusCode: 200,
+    // 首页轮播图接口地址
+    swiperDataUrl: 'http://120.25.163.140:8091/home',
+    // 存放轮播图数据
+    swiperData: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const url = this.data.swiperDataUrl
+    getIndexSwiperData(url)
+    .then((res) => {
+      if(res.statusCode === this.data.statusCode) {
+        const data = res.data.result.header.dsps
+        const swiperData = []
+        // 对轮播图数据进行处理
+        data.forEach((value, index) => {
+          const swiper = {}
+          // 轮播图的图片
+          swiper.imgage = value.d.i
+          // 轮播图的id
+          const id = value.d.url.split("?id=")[1]
+          swiper.id = id
+          swiperData.push(swiper)
+        })
+        this.setData({
+          swiperData
+        })
+      }
+    })
   },
 
   /**

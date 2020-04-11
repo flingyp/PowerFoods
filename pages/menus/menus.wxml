@@ -1,2 +1,123 @@
-<!--pages/menus/menus.wxml-->
-<text>pages/menus/menus.wxml</text>
+<view class="container">
+  <view class="menus_items">
+    <view class="menu_item">
+      <!-- 菜单标题 -->
+      <view class="menu_title">
+        <iconfont name="wan2"></iconfont>
+        <text class="title">菜式菜品</text>
+      </view>
+      <!-- 菜单项 -->
+      <view class="menu_choose">
+        <view class="choose_item">
+          <view class="choose_title">家常菜</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">快手菜</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">创意菜</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">素菜</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">凉菜</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">烘培</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">面食</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">汤</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">自制调味料</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="menu_item">
+      <!-- 菜单标题 -->
+      <view class="menu_title">
+        <iconfont name="wan2"></iconfont>
+        <text class="title">菜系</text>
+      </view>
+      <!-- 菜单项 -->
+      <view class="menu_choose">
+        <view class="choose_item">
+          <view class="choose_title">川菜</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">鱼菜</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">创意菜</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">素菜</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">凉菜</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">烘培</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">面食</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">汤</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">自制调味料</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">潮州菜</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="menu_item">
+      <!-- 菜单标题 -->
+      <view class="menu_title">
+        <iconfont name="wan2"></iconfont>
+        <text class="title">时令食材</text>
+      </view>
+      <!-- 菜单项 -->
+      <view class="menu_choose">
+        <view class="choose_item">
+          <view class="choose_title">川菜</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">鱼菜</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">创意菜</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">素菜</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">凉菜</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">烘培</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">面食</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">汤</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">自制调味料</view>
+        </view>
+        <view class="choose_item">
+          <view class="choose_title">潮州菜</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

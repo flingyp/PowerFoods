@@ -6,6 +6,7 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
+		"enhance": false,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
@@ -40,13 +41,35 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"gamePlugin": {
 			"current": -1,
 			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "菜单页面",
+					"pathName": "pages/menus/menus",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "菜谱详情页面",
+					"pathName": "pages/food_detail/food_detail",
+					"scene": null
+				}
+			]
 		}
 	}
 }

@@ -1,6 +1,6 @@
 Component({
   properties: {
-    // mine | grid-active-copy | sousuo | dinner | yexiao | sousuo1 | wan2 | dujiaoshouicon | ICON_zaocan- | zongjingliwucan | remen | icon_xiawucha | remen1 | fenxiang | shoucang1 | shouye5 | wancan | wucan | zaocan | shouye | mine-active | grid | shouye-active
+    // cainixihuan | mine | grid-active-copy | sousuo | dinner | yexiao | sousuo1 | wan2 | dujiaoshouicon | ICON_zaocan- | zongjingliwucan | remen | icon_xiawucha | remen1 | fenxiang | shoucang1 | shouye5 | wancan | wucan | zaocan | shouye | mine-active | grid | shouye-active
     name: {
       type: String,
     },
@@ -26,7 +26,7 @@ Component({
   },
   data: {
     colors: '',
-    svgSize: 24,
+    svgSize: 20,
     quot: '"',
     isStr: true,
   },

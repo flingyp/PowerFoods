@@ -95,4 +95,64 @@
         </scroll-view>
     </view>
   </view>
+
+  <!-- 猜你喜欢 部分 -->
+  <view class="like_foods">
+      <view class="like_title">
+        <view class="title">
+          猜你喜欢
+          <iconfont class="xihuan" name="cainixihuan"></iconfont>
+        </view>
+      </view>
+      <view class="like_items">
+        <view class="like_item">
+          <view class="item_img">
+            <image src="http://api.jisuapi.com/recipe/upload/20160806/115055_62977.jpg"></image>
+          </view>
+          <view class="item_title">
+            养胃
+          </view>
+        </view>
+        <view class="like_item">
+          <view class="item_img">
+            <image src="http://api.jisuapi.com/recipe/upload/20160806/115056_51841.jpg"></image>
+          </view>
+          <view class="item_title">
+            养胃
+          </view>
+        </view>
+        <view class="like_item">
+          <view class="item_img">
+            <image src="http://api.jisuapi.com/recipe/upload/20160806/115055_62977.jpg"></image>
+          </view>
+          <view class="item_title">
+            养胃
+          </view>
+        </view>
+        <view class="like_item">
+          <view class="item_img">
+            <image src="http://api.jisuapi.com/recipe/upload/20160806/115055_62977.jpg"></image>
+          </view>
+          <view class="item_title">
+            养胃
+          </view>
+        </view>
+        <view class="like_item">
+          <view class="item_img">
+            <image src="http://api.jisuapi.com/recipe/upload/20160806/115055_62977.jpg"></image>
+          </view>
+          <view class="item_title">
+            养胃
+          </view>
+        </view>
+        <view class="like_item">
+          <view class="item_img">
+            <image src="http://api.jisuapi.com/recipe/upload/20160806/115055_62977.jpg"></image>
+          </view>
+          <view class="item_title">
+            养胃
+          </view>
+        </view>
+      </view>
+  </view>
 </view>

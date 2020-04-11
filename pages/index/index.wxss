@@ -7,7 +7,7 @@
 .container .search_swiper .foods_search_swiper {
   width: 100%;
   height: 80%;
-  background-color: #e74c3c;
+  background-color: #ff7675;
 }
 .container .search_swiper .foods_search_swiper .search_box {
   position: absolute;
@@ -84,8 +84,16 @@
 }
 .container .hot_foods .hot_title_more .title {
   display: flex;
+  width: 220rpx;
   padding-left: 20rpx;
-  font-size: 32rpx;
+  font-size: 44rpx;
+  font-weight: 600;
+  position: relative;
+}
+.container .hot_foods .hot_title_more .title .remen1 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 .container .hot_foods .hot_title_more .more {
   padding-right: 20rpx;
@@ -120,11 +128,62 @@
   position: absolute;
   width: 120rpx;
   height: 40rpx;
-  background-color: #e74c3c;
+  background-color: #ff7675;
   color: #fff;
   font-size: 26rpx;
   text-align: center;
+  text-shadow: 0 0 10rpx #dfe6e9;
   border-radius: 10rpx;
   left: 5%;
   bottom: 5%;
+}
+.container .hot_foods .hot_items ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.container .like_foods {
+  margin-top: 80rpx;
+}
+.container .like_foods .like_title {
+  padding-left: 20rpx;
+}
+.container .like_foods .like_title .title {
+  font-size: 44rpx;
+  font-weight: 600;
+  display: flex;
+  position: relative;
+}
+.container .like_foods .like_title .title .xihuan {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+}
+.container .like_foods .like_items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50rpx 30rpx;
+  padding-top: 40rpx;
+}
+.container .like_foods .like_items .like_item {
+  height: 360rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12rpx;
+}
+.container .like_foods .like_items .like_item .item_img {
+  width: 90%;
+  height: 100%;
+}
+.container .like_foods .like_items .like_item .item_img image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+.container .like_foods .like_items .like_item .item_title {
+  font-size: 26rpx;
+  font-weight: 500;
+  padding: 8rpx 0;
 }

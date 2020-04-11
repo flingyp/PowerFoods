@@ -1,0 +1,113 @@
+@smallFontSize: 24rpx;
+@baseFontSize: 32rpx;
+@bigFontSize: 40rpx;
+
+.container {
+
+  // 食物图片
+  .food_img {
+    width: 100vw;
+    height: 460rpx;
+
+    image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // 食物介绍
+  .food_introduce {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30rpx 10rpx;
+    border-bottom: 10rpx solid rgb(99, 110, 114);
+
+    .name {
+      letter-spacing: 3rpx;
+      padding-bottom: 16rpx;
+    }
+
+    .tag {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20rpx;
+
+      .tag_item {
+        font-size: @smallFontSize;
+        text-align: center;
+        border: 1px solid rgb(255, 118, 117);
+        border-radius: 20rpx;
+        padding:6rpx 10rpx;
+        margin: 0 6rpx;
+      }
+    }
+
+    .content {
+      font-size: @smallFontSize;
+      text-align: center;
+    }
+  }
+
+  // 食物材料
+  .food_material{
+    display: flex;
+    flex-direction: column;
+    padding: 30rpx 10rpx;
+    border-bottom: 10rpx solid rgb(99, 110, 114);
+    .material{
+      font-weight: 700;
+      font-size: @bigFontSize;
+      letter-spacing: 2rpx;
+      text-align: center;
+    }
+    .material_items{
+      .material_item{
+        display: flex;
+        padding: 8rpx;
+        .name,.amount{
+          font-size: @smallFontSize;
+          color: rgb(99, 110, 114);
+        }
+      }
+    }
+  }
+
+  .food_process{
+    display: flex;
+    flex-direction: column;
+    padding: 30rpx 10rpx;
+    .process_title{
+      font-weight: 700;
+      font-size: @bigFontSize;
+      letter-spacing: 2rpx;
+      text-align: center;
+    }
+    .process_items{
+      width: 90%;
+      margin:0 auto;
+      .process_item{
+        width: 100%;
+        padding: 20rpx 0;
+        .item_num{
+          padding-bottom: 20rpx;
+          color:rgb(241, 144, 102);
+          font-weight: bolder;
+        }
+        .item_img{
+          padding-bottom: 20rpx;
+          image{
+            width: 100%;
+            border-radius: 10rpx;
+          }
+        }
+        .item_content{
+          text-align: center;
+          font-size: @smallFontSize;
+        }
+      }
+    }
+  }
+}

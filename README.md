@@ -26,3 +26,13 @@
 
 *4.微信小程序scroll-view左右横向滑动遇到的小细节*
 + https://blog.csdn.net/qq_36742720/article/details/84774738
+
+*5.真机调试的时候 scroll-view 滚动的时候出现滚动条 隐藏的方法*
+```css
+  /* 复制到样式文件里 */
+  ::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    color: transparent;
+  }
+```

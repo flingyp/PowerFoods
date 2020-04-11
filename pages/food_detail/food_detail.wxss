@@ -1,1 +1,94 @@
-/* pages/food_detail/food_detail.wxss */
+.container .food_img {
+  width: 100vw;
+  height: 460rpx;
+}
+.container .food_img image {
+  width: 100%;
+  height: 100%;
+}
+.container .food_introduce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30rpx 10rpx;
+  border-bottom: 10rpx solid #636e72;
+}
+.container .food_introduce .name {
+  letter-spacing: 3rpx;
+  padding-bottom: 16rpx;
+}
+.container .food_introduce .tag {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+.container .food_introduce .tag .tag_item {
+  font-size: 24rpx;
+  text-align: center;
+  border: 1px solid #ff7675;
+  border-radius: 20rpx;
+  padding: 6rpx 10rpx;
+  margin: 0 6rpx;
+}
+.container .food_introduce .content {
+  font-size: 24rpx;
+  text-align: center;
+}
+.container .food_material {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx 10rpx;
+  border-bottom: 10rpx solid #636e72;
+}
+.container .food_material .material {
+  font-weight: 700;
+  font-size: 40rpx;
+  letter-spacing: 2rpx;
+  text-align: center;
+}
+.container .food_material .material_items .material_item {
+  display: flex;
+  padding: 8rpx;
+}
+.container .food_material .material_items .material_item .name,
+.container .food_material .material_items .material_item .amount {
+  font-size: 24rpx;
+  color: #636e72;
+}
+.container .food_process {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx 10rpx;
+}
+.container .food_process .process_title {
+  font-weight: 700;
+  font-size: 40rpx;
+  letter-spacing: 2rpx;
+  text-align: center;
+}
+.container .food_process .process_items {
+  width: 90%;
+  margin: 0 auto;
+}
+.container .food_process .process_items .process_item {
+  width: 100%;
+  padding: 20rpx 0;
+}
+.container .food_process .process_items .process_item .item_num {
+  padding-bottom: 20rpx;
+  color: #f19066;
+  font-weight: bolder;
+}
+.container .food_process .process_items .process_item .item_img {
+  padding-bottom: 20rpx;
+}
+.container .food_process .process_items .process_item .item_img image {
+  width: 100%;
+  border-radius: 10rpx;
+}
+.container .food_process .process_items .process_item .item_content {
+  text-align: center;
+  font-size: 24rpx;
+}

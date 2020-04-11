@@ -1,2 +1,78 @@
-<!--pages/food_detail/food_detail.wxml-->
-<text>pages/food_detail/food_detail.wxml</text>
+<view class="container">
+  <!-- 食物的图片 -->
+  <view class="food_img">
+    <image mode="scaleToFill" lazy-load src="http://api.jisuapi.com/recipe/upload/20160719/132119_40514.jpg"></image>
+  </view>
+
+  <!-- 食物的介绍 -->
+  <view class="food_introduce">
+    <view class="name">薄荷早餐饼</view>
+    <view class="tag">
+      <view class="tag_item">母亲节</view>
+      <view class="tag_item">夏季</view>
+      <view class="tag_item">早餐</view>
+      <view class="tag_item">清热解毒</view>
+      <view class="tag_item">烙</view>
+      <view class="tag_item">电饼档</view>
+      <view class="tag_item">面食</view>
+    </view>
+    <view class="content">
+      小时候妈妈烙饼，喜欢在里面加些花椒芽，鱼香草，鱼香草长在水田边，离住处有一段路，每次都是我去采回家，鱼香草味道和形状都和薄荷差不多，一度我还以为薄荷就是鱼香，鱼香就是薄荷了，后来查过两者的图片，还真有点区别的。 薄荷放点在面糊里做饼吃，吃起来有点凉凉的，还挺美味的呢。
+    </view>
+  </view>
+
+  <!-- 食物的材料 -->
+  <view class="food_material">
+    <view class="material">材料</view>
+    <view class="material_items">
+      <view class="material_item">
+        <view class="name">清水：</view>
+        <view class="amount">适量</view>
+      </view>
+      <view class="material_item">
+        <view class="name">盐：</view>
+        <view class="amount">适量</view>
+      </view>
+      <view class="material_item">
+        <view class="name">面粉：</view>
+        <view class="amount">150g</view>
+      </view>
+      <view class="material_item">
+        <view class="name">胡萝卜：</view>
+        <view class="amount">50g</view>
+      </view>
+      <view class="material_item">
+        <view class="name">薄荷叶：</view>
+        <view class="amount">30g</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 食物的制作步骤 -->
+  <view class="food_process">
+    <view class="process_title">步骤</view>
+    <view class="process_items">
+      <view class="process_item">
+        <view class="item_num">第一步</view>
+        <view class="item_img">
+          <image src="http://api.jisuapi.com/recipe/upload/20160721/180648_83821.jpg"></image>
+        </view>
+        <view class="item_content">1.原料，面粉，薄荷叶，鸡蛋，胡萝卜</view>
+      </view>
+      <view class="process_item">
+        <view class="item_num">第二步</view>
+        <view class="item_img">
+          <image src="http://api.jisuapi.com/recipe/upload/20160721/180648_29478.jpg"></image>
+        </view>
+        <view class="item_content">2.薄荷叶和胡萝卜切成碎</view>
+      </view>
+      <view class="process_item">
+        <view class="item_num">第三步</view>
+        <view class="item_img">
+          <image src="http://api.jisuapi.com/recipe/upload/20160721/180648_53125.jpg"></image>
+        </view>
+        <view class="item_content">3.面粉里加入两个鸡蛋，这个一个鸡蛋也行的，我喜欢鸡蛋多点</view>
+      </view>
+    </view>
+  </view>
+</view>

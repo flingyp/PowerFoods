@@ -1,1 +1,39 @@
-/* pages/menus/menus.wxss */
+.container .menus_items .menu_item {
+  padding: 28rpx 0;
+}
+.container .menus_items .menu_item .menu_title {
+  display: flex;
+  justify-content: center;
+}
+.container .menus_items .menu_item .menu_title .title {
+  font-size: 32rpx;
+  color: #000;
+  left: 2rpx;
+  padding-left: 12rpx;
+}
+.container .menus_items .menu_item .menu_choose {
+  width: 96%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40rpx;
+}
+.container .menus_items .menu_item .menu_choose .choose_item {
+  width: 140rpx;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e74c3c;
+  border-radius: 20rpx;
+  font-size: 22rpx;
+  margin-bottom: 30rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.container .menus_items .menu_item .menu_choose .choose_item .choose_title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

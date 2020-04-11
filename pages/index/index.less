@@ -1,8 +1,9 @@
-@SearchSwiperbackgroundColor: #e74c3c;
+@SearchSwiperbackgroundColor: #ff7675;
 @SearchBox: #fff;
 @IconSearch_FontColor: #CACACA;
 @basFontSize: 32rpx;
 @smallFontSize: 26rpx;
+@bigFontSize: 44rpx;
 
 .container {
   .search_swiper {
@@ -104,8 +105,17 @@
 
       .title {
         display: flex;
+        width: 220rpx;
         padding-left: 20rpx;
-        font-size: @basFontSize;
+        font-size: @bigFontSize;
+        font-weight: 600;
+        position: relative;
+
+        .remen1 {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
       }
 
       .more {
@@ -125,15 +135,16 @@
 
       .hot_image {
         width: auto;
-        overflow:hidden;
+        overflow: hidden;
         height: 100%;
+
         .hot_item {
           width: 30%;
           height: 100%;
           display: inline-block;
           position: relative;
           padding: 0 10rpx;
-  
+
           image {
             width: 100%;
             height: 100%;
@@ -148,10 +159,70 @@
             color: @SearchBox;
             font-size: @smallFontSize;
             text-align: center;
+            text-shadow: 0 0 10rpx rgb(223, 230, 233, .5);
             border-radius: 10rpx;
             left: 5%;
             bottom: 5%;
           }
+        }
+      }
+      ::-webkit-scrollbar{
+        width: 0;
+        height: 0;
+        color: transparent;
+      }
+    }
+  }
+
+  .like_foods {
+    margin-top: 80rpx;
+
+    .like_title {
+      padding-left: 20rpx;
+
+      .title {
+        font-size: @bigFontSize;
+        font-weight: 600;
+        display: flex;
+        position: relative;
+
+        .xihuan {
+          position: absolute;
+          bottom: 0;
+          left: 25%;
+        }
+      }
+    }
+
+    .like_items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50rpx 30rpx;
+      padding-top: 40rpx;
+
+      .like_item {
+        height: 360rpx;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 12rpx;
+
+        .item_img {
+          width: 90%;
+          height: 100%;
+
+          image {
+            width: 100%;
+            height: 100%;
+            border-radius: 20rpx;
+          }
+        }
+
+        .item_title {
+          font-size: @smallFontSize;
+          font-weight: 500;
+          padding: 8rpx 0;
         }
       }
     }
