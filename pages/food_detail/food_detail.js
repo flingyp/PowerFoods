@@ -12,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // 轮播图 热门标签 猜你喜欢 传递过来的id 值 通过 options 可以 页面参数 id
   },
 
   /**

@@ -136,6 +136,9 @@
   border-radius: 10rpx;
   left: 5%;
   bottom: 5%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .container .hot_foods .hot_items ::-webkit-scrollbar {
   width: 0;
@@ -185,5 +188,5 @@
 .container .like_foods .like_items .like_item .item_title {
   font-size: 26rpx;
   font-weight: 500;
-  padding: 8rpx 0;
+  margin: 8rpx 0;
 }

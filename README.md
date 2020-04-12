@@ -36,3 +36,21 @@
     color: transparent;
   }
 ```
+
+*6. 菜详情页数据格式*
+```json
+  {
+    // 菜的图片
+    'imgage': 'xxx',
+    // 菜的名字
+    'name': 'xxx',
+    // 菜的标签
+    'tag': 'xxx',
+    // 菜的内容
+    'content': 'xxx',
+    // 菜的材料
+    'material': 'xxx',
+    // 菜的步骤
+    'process': 'xxx'  
+  }
+```

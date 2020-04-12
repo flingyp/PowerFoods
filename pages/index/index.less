@@ -163,10 +163,14 @@
             border-radius: 10rpx;
             left: 5%;
             bottom: 5%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
           }
         }
       }
-      ::-webkit-scrollbar{
+
+      ::-webkit-scrollbar {
         width: 0;
         height: 0;
         color: transparent;
@@ -222,7 +226,7 @@
         .item_title {
           font-size: @smallFontSize;
           font-weight: 500;
-          padding: 8rpx 0;
+          margin: 8rpx 0;
         }
       }
     }

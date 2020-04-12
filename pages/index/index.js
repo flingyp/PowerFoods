@@ -1,4 +1,4 @@
-import {getIndexSwiperData} from "../../logic/ajax_api.js"
+import {getIndexSwiperData, getHotLikeData} from "../../logic/ajax_api.js"
 Page({
 
   /**
@@ -9,14 +9,19 @@ Page({
     statusCode: 200,
     // 首页轮播图接口地址
     swiperDataUrl: 'http://120.25.163.140:8091/home',
+    // 热门标签的接口地址
+    hotDataUrl: 'http://120.25.163.140:8091/recipe/list?keyword=热门标签',
+    // 猜你喜欢的接口地址
+    likeDataUrl: 'http://120.25.163.140:8091/recipe/list?keyword=猜你喜欢',
     // 存放轮播图数据
-    swiperData: []
+    swiperData: [],
+    // 存放热门标签的数据
+    hotData: [],
+    // 存放猜你喜欢数据
+    likeData: []
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  // 轮播图数据函数
+  swiper_data() {
     const url = this.data.swiperDataUrl
     getIndexSwiperData(url)
     .then((res) => {
@@ -38,6 +43,62 @@ Page({
         })
       }
     })
+  },
+  // 热门标签的数据
+  hot_data() {
+    const url = this.data.hotDataUrl
+    getHotLikeData(url)
+    .then(res => {
+      const data = res.data.result.list
+      const hotData = []
+      // 对 热门标签数据进行处理
+      data.forEach((value, index) => {
+        const hot = {}
+        // 热门标签的图片
+        hot.imgage = value.r.img
+        // 热门标签的id 
+        hot.id = value.r.id
+        // 热门标签的 name
+        hot.name = value.r.an
+        hotData.push(hot)
+      })
+      this.setData({
+        hotData
+      })
+    })
+  },
+  // 猜你喜欢的数据
+  like_data() {
+    const url = 'http://120.25.163.140:8091/recipe/list?keyword=猜你喜欢'
+    getHotLikeData(url)
+    .then(res => {
+      console.log(res)
+      const data = res.data.result.list
+      const likeData = []
+      // 对 热门标签数据进行处理
+      data.forEach((value, index) => {
+        const like = {}
+        // 热门标签的图片
+        like.imgage = value.r.img
+        // 热门标签的id 
+        like.id = value.r.id
+        // 热门标签的 name
+        like.name = value.r.an
+        likeData.push(like)
+      })
+      this.setData({
+        likeData
+      })
+    }) 
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.swiper_data()
+    this.hot_data()
+    this.like_data()
   },
 
   /**

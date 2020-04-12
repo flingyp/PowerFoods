@@ -13,16 +13,10 @@
       <!-- 轮播部分  -->
       <view class="foods_swiper">
         <swiper class="swiper" autoplay interval="3000" circular indicator-dots="true" indicator-color="#000" indicator-active-color="#2ecc71">
-          <swiper-item class="swiper_item">
-            <navigator class="swiper_navigator" url="">
-              <image lazy-load mode="scaleToFill" src="http://img3.imgtn.bdimg.com/it/u=2935226822,3932209253&fm=15&gp=0.jpg" />
-            </navigator>
-                
-          </swiper-item>
-          <swiper-item class="swiper_item">
-            <navigator class="swiper_navigator" url="">
-              <image lazy-load mode="scaleToFill" src="http://img4.imgtn.bdimg.com/it/u=3659355905,4147519143&fm=11&gp=0.jpg" />
-            </navigator>
+          <swiper-item class="swiper_item" wx:for="{{swiperData}}" wx:key="id">
+            <navigator class="swiper_navigator" url="/pages/food_detail/food_detail?id={{item.id}}">
+              <image lazy-load mode="scaleToFill" src="{{item.imgage}}" />
+            </navigator>     
           </swiper-item>
         </swiper>
       </view>
@@ -64,34 +58,10 @@
     </view>
     <view class="hot_items">
         <scroll-view class="hot_image" scroll-x>
-            <view class="hot_item">
-                <image src="http://api.jisuapi.com/recipe/upload/20160720/100358_85297.jpg"></image>
-                <text>家常菜</text>
-            </view>
-            <view class="hot_item">
-                <image src="http://api.jisuapi.com/recipe/upload/20160720/100358_85297.jpg"></image>
-                <text>家常菜</text>
-            </view>
-            <view class="hot_item">
-                <image src="http://api.jisuapi.com/recipe/upload/20160720/100358_85297.jpg"></image>
-                <text>家常菜</text>
-            </view>
-            <view class="hot_item">
-                <image src="http://api.jisuapi.com/recipe/upload/20160720/100358_85297.jpg"></image>
-                <text>家常菜</text>
-            </view>
-            <view class="hot_item">
-                <image src="http://api.jisuapi.com/recipe/upload/20160720/100358_85297.jpg"></image>
-                <text>家常菜</text>
-            </view>
-            <view class="hot_item">
-                <image src="http://api.jisuapi.com/recipe/upload/20160720/100358_85297.jpg"></image>
-                <text>家常菜</text>
-            </view>
-            <view class="hot_item">
-                <image src="http://api.jisuapi.com/recipe/upload/20160720/100358_85297.jpg"></image>
-                <text>家常菜</text>
-            </view>
+            <navigator class="hot_item" wx:for="{{hotData}}" wx:key="id" url="/pages/food_detail/food_detail?id={{item.id}}">
+                <image src="{{item.imgage}}"></image>
+                <text>{{item.name}}</text>
+            </navigator>
         </scroll-view>
     </view>
   </view>
@@ -105,52 +75,12 @@
         </view>
       </view>
       <view class="like_items">
-        <view class="like_item">
-          <view class="item_img">
-            <image src="http://api.jisuapi.com/recipe/upload/20160806/115055_62977.jpg"></image>
-          </view>
+        <view class="like_item" wx:for="{{likeData}}" wx:key="id">
+          <navigator class="item_img" url="/pages/food_detail/food_detail?id={{item.id}}">
+            <image src="{{item.imgage}}"></image>
+          </navigator>
           <view class="item_title">
-            养胃
-          </view>
-        </view>
-        <view class="like_item">
-          <view class="item_img">
-            <image src="http://api.jisuapi.com/recipe/upload/20160806/115056_51841.jpg"></image>
-          </view>
-          <view class="item_title">
-            养胃
-          </view>
-        </view>
-        <view class="like_item">
-          <view class="item_img">
-            <image src="http://api.jisuapi.com/recipe/upload/20160806/115055_62977.jpg"></image>
-          </view>
-          <view class="item_title">
-            养胃
-          </view>
-        </view>
-        <view class="like_item">
-          <view class="item_img">
-            <image src="http://api.jisuapi.com/recipe/upload/20160806/115055_62977.jpg"></image>
-          </view>
-          <view class="item_title">
-            养胃
-          </view>
-        </view>
-        <view class="like_item">
-          <view class="item_img">
-            <image src="http://api.jisuapi.com/recipe/upload/20160806/115055_62977.jpg"></image>
-          </view>
-          <view class="item_title">
-            养胃
-          </view>
-        </view>
-        <view class="like_item">
-          <view class="item_img">
-            <image src="http://api.jisuapi.com/recipe/upload/20160806/115055_62977.jpg"></image>
-          </view>
-          <view class="item_title">
-            养胃
+            {{item.name}}
           </view>
         </view>
       </view>
