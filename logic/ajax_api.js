@@ -28,3 +28,21 @@ export const getHotLikeData = function(url) {
     })
   })
 }
+
+// 轮播图 热门标签 猜你喜欢 菜详情 数据
+export const getFoodDetailData = function(url, id) {
+  return new Promise((resolve, reject) => {
+    wx.request({
+      url,
+      data: {
+        id
+      },
+      success(res) {
+        resolve(res)
+      },
+      fail(res) {
+        reject(res)
+      }
+    })
+  })
+}

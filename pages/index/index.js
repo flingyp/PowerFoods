@@ -59,7 +59,7 @@ Page({
         // 热门标签的id 
         hot.id = value.r.id
         // 热门标签的 name
-        hot.name = value.r.an
+        hot.name = value.r.n
         hotData.push(hot)
       })
       this.setData({
@@ -72,7 +72,6 @@ Page({
     const url = 'http://120.25.163.140:8091/recipe/list?keyword=猜你喜欢'
     getHotLikeData(url)
     .then(res => {
-      console.log(res)
       const data = res.data.result.list
       const likeData = []
       // 对 热门标签数据进行处理
@@ -83,7 +82,7 @@ Page({
         // 热门标签的id 
         like.id = value.r.id
         // 热门标签的 name
-        like.name = value.r.an
+        like.name = value.r.n
         likeData.push(like)
       })
       this.setData({
@@ -133,14 +132,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+  
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    
   },
 
   /**

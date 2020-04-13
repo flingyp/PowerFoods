@@ -201,19 +201,22 @@
     .like_items {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 50rpx 30rpx;
-      padding-top: 40rpx;
+      gap: 30rpx 10rpx;
+      margin-top: 40rpx;
 
       .like_item {
+        width: 90%;
         height: 360rpx;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0 12rpx;
+        margin: 0 12rpx;
+        margin-bottom: 20rpx;
+        margin-top: 15rpx;
 
         .item_img {
-          width: 90%;
+          width: 100%;
           height: 100%;
 
           image {
@@ -225,8 +228,11 @@
 
         .item_title {
           font-size: @smallFontSize;
-          font-weight: 500;
+          font-weight: 400;
           margin: 8rpx 0;
+          width: 100%;
+          height: 48rpx;
+          text-align: center;
         }
       }
     }
