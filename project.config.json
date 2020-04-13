@@ -67,6 +67,13 @@
 					"id": -1,
 					"name": "菜谱详情页面",
 					"pathName": "pages/food_detail/food_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "菜谱页面",
+					"pathName": "pages/food_menu/food_menu",
 					"scene": null
 				}
 			]

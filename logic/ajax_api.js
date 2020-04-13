@@ -46,3 +46,21 @@ export const getFoodDetailData = function(url, id) {
     })
   })
 }
+
+// 菜单页面 数据
+export const getMenusData = function(url, appkey) {
+  return new Promise((resolve, reject) => {
+    wx.request({
+      url,
+      data: {
+        appkey
+      },
+      success(res) {
+        resolve(res)
+      },
+      fail(res) {
+        reject(res)
+      }
+    })
+  })
+}
