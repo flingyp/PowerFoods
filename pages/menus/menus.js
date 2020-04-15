@@ -47,7 +47,7 @@ Page({
         this.getMenus(url,key)
       } else {
         // 可以使用 缓存 的数据
-        console.log('使用缓存的数据')
+        console.log('使用缓存菜单的数据')
         const menusData = menusDataClear(Menus.data)
         this.setData({
           menusData

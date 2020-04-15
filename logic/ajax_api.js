@@ -40,8 +40,8 @@ export const getFoodDetailData = function(url, id) {
       success(res) {
         resolve(res)
       },
-      fail(res) {
-        reject(res)
+      fail(err) {
+        reject(err)
       }
     })
   })
@@ -58,9 +58,29 @@ export const getMenusData = function(url, appkey) {
       success(res) {
         resolve(res)
       },
-      fail(res) {
-        reject(res)
+      fail(err) {
+        reject(err)
       }
+    })
+  })
+}
+
+// 早餐 午餐 下午茶 晚餐 夜宵 菜谱搜索 数据
+export const getInexData = function(url,keyword,appkey,start) {
+  return new Promise((resolve, reject) => {
+    wx.request({
+      url,
+      data: {
+        appkey,
+        keyword,
+        start
+      },
+      success(res) {
+        resolve(res)
+      },
+      fail(err) {
+        reject(err)
+      } 
     })
   })
 }

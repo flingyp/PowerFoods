@@ -25,23 +25,23 @@
 
   <!-- 早餐 午餐 下午茶 晚餐 夜宵 部分 -->
   <view class="oneday_foods">
-    <view class="oneday_item">
+    <view class="oneday_item" bindtap="goFoodeMenu" data-keyword="早餐">
       <iconfont class="zaocan" name="zaocan"></iconfont>
       <text>早餐</text>
     </view>
-    <view class="oneday_item">
+    <view class="oneday_item" bindtap="goFoodeMenu" data-keyword="午餐">
       <iconfont class="zongjingliwucan" name="zongjingliwucan"></iconfont>
       <text>午餐</text>
     </view>
-    <view class="oneday_item">
+    <view class="oneday_item" bindtap="goFoodeMenu" data-keyword="下午茶">
       <iconfont class="icon_xiawucha" name="icon_xiawucha"></iconfont>
       <text>下午茶</text>
     </view>
-    <view class="oneday_item">
+    <view class="oneday_item" bindtap="goFoodeMenu" data-keyword="晚餐">
       <iconfont class="dinner" name="dinner"></iconfont>
       <text>晚餐</text>
     </view>
-    <view class="oneday_item">
+    <view class="oneday_item" bindtap="goFoodeMenu" data-keyword="夜宵">
       <iconfont class="yexiao" name="yexiao"></iconfont>
       <text>夜宵</text>
     </view>

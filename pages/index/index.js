@@ -90,6 +90,17 @@ Page({
       })
     }) 
   },
+  // 点击后 早餐 午餐 下午茶 晚餐 夜宵 进入 菜谱页面
+  goFoodeMenu(e) {
+    // console.log(e)
+    // 点击获取对应的keyword关键字
+    const keyword = e.currentTarget.dataset.keyword
+    // console.log(keyword)
+    // 跳转到对应的页面
+    wx.navigateTo({
+      url: `/pages/food_menu/food_menu?keyword=${keyword}`
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
