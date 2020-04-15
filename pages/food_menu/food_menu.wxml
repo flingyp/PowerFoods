@@ -2,7 +2,7 @@
   <view class="menus">
     <view class="menu_item" wx:for="{{foodMenuData}}" wx:key="id">
       <!-- 菜的图片 -->
-      <view class="item_img">
+      <view class="item_img" bindtap="goFoodDetail" data-item="{{item}}">
         <image src="{{item.pic}}"></image>
       </view>
       <view class="item_content">

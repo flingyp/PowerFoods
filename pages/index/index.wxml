@@ -14,7 +14,7 @@
       <view class="foods_swiper">
         <swiper class="swiper" autoplay interval="3000" circular indicator-dots="true" indicator-color="#000" indicator-active-color="#2ecc71">
           <swiper-item class="swiper_item" wx:for="{{swiperData}}" wx:key="id">
-            <navigator class="swiper_navigator" url="/pages/food_detail/food_detail?id={{item.id}}">
+            <navigator class="swiper_navigator" url="/pages/food_detail/food_detail?id={{item.id}}&api=1">
               <image lazy-load mode="scaleToFill" src="{{item.imgage}}" />
             </navigator>     
           </swiper-item>
@@ -58,7 +58,7 @@
     </view>
     <view class="hot_items">
         <scroll-view class="hot_image" scroll-x>
-            <navigator class="hot_item" wx:for="{{hotData}}" wx:key="id" url="/pages/food_detail/food_detail?id={{item.id}}">
+            <navigator class="hot_item" wx:for="{{hotData}}" wx:key="id" url="/pages/food_detail/food_detail?id={{item.id}}&api=1">
                 <image src="{{item.imgage}}"></image>
                 <text>{{item.name}}</text>
             </navigator>
@@ -76,7 +76,7 @@
       </view>
       <view class="like_items">
         <view class="like_item" wx:for="{{likeData}}" wx:key="id">
-          <navigator class="item_img" url="/pages/food_detail/food_detail?id={{item.id}}">
+          <navigator class="item_img" url="/pages/food_detail/food_detail?id={{item.id}}&api=1">
             <image src="{{item.imgage}}"></image>
           </navigator>
           <view class="item_title">

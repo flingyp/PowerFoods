@@ -1,4 +1,5 @@
 import {getMenusDetailData} from '../../logic/ajax_api'
+import {createFoodDetail2} from '../../logic/class'
 Page({
 
   /**
@@ -32,6 +33,15 @@ Page({
           foodMenuData: data.list
         })
       }
+    })
+  },
+  goFoodDetail(e) {
+    // 用于区分 首页 和 其他页面的数据 1 为 首页 2 为 其他的页面
+    const api = 2
+    const item = JSON.stringify(createFoodDetail2(e.currentTarget.dataset.item))
+    // 跳转到食物详情页面 携带菜谱 信息
+    wx.navigateTo({
+      url: `/pages/food_detail/food_detail?item=${item}&api=${api}`,
     })
   },
 

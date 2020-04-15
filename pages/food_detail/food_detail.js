@@ -14,7 +14,10 @@ Page({
     id: '',
     // 轮播图 热门标签 猜你喜欢 接口地址
     shlUrl: 'http://120.25.163.140:8091/recipe/detail',
-    // 轮播图 热门标签 猜你喜欢 详情数据
+    // 其他页面的 接口地址
+    otherUrl: 'https://api.jisuapi.com/recipe/detail',
+    key: '889d795d054a3d62',
+    // 轮播图 热门标签 猜你喜欢 其他页面 详情数据
     foodDetailData: {}
   },
   food_detail_data(url, id) {
@@ -57,11 +60,34 @@ Page({
     this.setData({
       id: options.id
     })
-    const url = this.data.shlUrl
-    wx.showLoading({
-      title: '加载中',
-    })
-    this.food_detail_data(url, this.data.id)
+    // 如果 api 为 1 用 shlUrl接口地址  为 2 则不用 shlUrl 接口地址
+    // const api = options.api
+    if(options.api == 1) {
+      const url = this.data.shlUrl
+      wx.showLoading({
+        title: '加载中',
+      })
+      this.food_detail_data(url, this.data.id)
+    } else if(options.api == 2) {
+      let item = JSON.parse(options.item)
+      item.material.forEach(item1 => {
+        for(let key in item1) {
+          if(key === 'mname') {
+            item1.title = item1[key]
+          }
+        }
+      })
+      item.process.forEach((item1,index) => {
+        for(let key in item1) {
+          item1.position = index + 1
+          item1.content = item1.pcontent
+          item1.image = item1.pic
+        }
+      })
+      this.setData({
+        foodDetailData: item
+      })
+    }
   },
 
   /**

@@ -95,10 +95,12 @@ Page({
     // console.log(e)
     // 点击获取对应的keyword关键字
     const keyword = e.currentTarget.dataset.keyword
+    // 用于区分 首页 和 其他页面的数据 1 为 首页 2 为 其他的页面
+    const api = 1
     // console.log(keyword)
     // 跳转到对应的页面
     wx.navigateTo({
-      url: `/pages/food_menu/food_menu?keyword=${keyword}`
+      url: `/pages/food_menu/food_menu?keyword=${keyword}&api=${api}`
     })
   },
 

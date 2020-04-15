@@ -9,10 +9,22 @@ class foodDetail {
     this.process = process
   }
 }
-// new 出 菜谱详情信息 对象
+// new 出 菜谱详情信息 首页页面的 对象
 export function createFoodDetail(item) {
   return new foodDetail({
     imgage: item.imgage,
+    name: item.name,
+    tag: item.tag,
+    content: item.content,
+    material: item.material,
+    process: item.process
+  })
+}
+
+// new 出 其他页面的对象
+export function createFoodDetail2(item) {
+  return new foodDetail({
+    imgage: item.pic,
     name: item.name,
     tag: item.tag,
     content: item.content,
