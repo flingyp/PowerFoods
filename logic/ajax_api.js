@@ -84,3 +84,24 @@ export const getInexData = function(url,keyword,appkey,start) {
     })
   })
 }
+
+// 菜单页面 菜谱搜索 数据
+export const getMenusDetailData = function(url,classid,appkey,start, num) {
+  return new Promise((resolve, reject) => {
+    wx.request({
+      url,
+      data: {
+        appkey,
+        classid,
+        start,
+        num
+      },
+      success(res) {
+        resolve(res)
+      },
+      fail(err) {
+        reject(err)
+      } 
+    })
+  })
+}

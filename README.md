@@ -4,7 +4,8 @@
 + 菜单页      menus
 + 我的页面   mine
 + 搜索页面   search
-+ 菜谱页面    food_menu (入口：首页的早餐 中餐等 和 菜单页面)
++ 早餐午餐下午茶等菜谱页面  food_menu 
++ 菜单页面的菜谱页面 menu_detail 
 + 菜详情页面   food_detail
 
 ### 技术选型

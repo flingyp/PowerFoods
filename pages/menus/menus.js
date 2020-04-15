@@ -26,6 +26,16 @@ Page({
       }
     })
   },
+  goMenuDetail(e) {
+    // 获取 classid
+    const classid = e.currentTarget.dataset.classid
+    // 获取 名字
+    const name = e.currentTarget.dataset.name
+    // 跳转到 menu_detail 页面
+    wx.navigateTo({
+      url: `/pages/menu_detail/menu_detail?classid=${classid}&name=${name}`
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

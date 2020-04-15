@@ -1,0 +1,47 @@
+@baseFontSize: 32rpx;
+@smallFontSize: 26rpx;
+@bigFontSize: 44rpx;
+
+.container {
+  .menus {
+    .menu_item {
+      display: flex;
+      margin: 28rpx 20rpx;
+
+      .item_img {
+        flex: 3;
+        height: 240rpx;
+
+        image {
+          width: 100%;
+          height: 100%;
+          border-radius: 10rpx;
+        }
+      }
+
+      .item_content {
+        flex: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0 20rpx;
+
+        .item_name {
+          font-size: @baseFontSize;
+          font-weight: 700;
+          letter-spacing: 2rpx;
+        }
+
+        .item_time {
+          font-size: @smallFontSize;
+          color: #ccc;
+        }
+
+        .item_tag {
+          font-size: @smallFontSize;
+          color: #ccc;
+        }
+      }
+    }
+  }
+}

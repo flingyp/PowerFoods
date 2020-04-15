@@ -9,7 +9,7 @@
       <!-- 菜单项 -->
       <view class="menu_choose">
         <view class="choose_item" wx:for="{{menu.list}}" wx:key="id">
-          <view class="choose_title">{{item.name}}</view>
+          <view class="choose_title" bindtap="goMenuDetail" data-classid="{{item.classid}}" data-name="{{item.name}}">{{item.name}}</view>
         </view>
       </view>
     </view>

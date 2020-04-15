@@ -5,7 +5,8 @@
     "pages/mine/mine",
     "pages/search/search",
     "pages/food_detail/food_detail",
-    "pages/food_menu/food_menu"
+    "pages/food_menu/food_menu",
+    "pages/menu_detail/menu_detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
