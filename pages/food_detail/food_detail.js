@@ -84,6 +84,8 @@ Page({
           item1.image = item1.pic
         }
       })
+      const newtag = item.tag.split(",")
+      item.tag = newtag
       this.setData({
         foodDetailData: item
       })
@@ -101,7 +103,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    // 设置 导航栏 标题
+    wx.setNavigationBarTitle({
+      title: `${this.data.foodDetailData.name}`
+    })
   },
 
   /**

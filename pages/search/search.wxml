@@ -1,2 +1,20 @@
-<!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class="container">
+  <view class="search_content">
+    <view class="search_input">
+      <text class="iconfont icon-sousuo"></text>
+      <input value="{{inputValue}}" placeholder="今天想吃什么"  maxlength="20" focus bindinput="getInputContent" bindconfirm="goMenuDetail"></input>
+    </view>
+    <view class="search">
+      <text class="search_title" bindtap="goMenuDetail">搜索</text>
+    </view>
+  </view>
+    
+  <view class="search_history">
+    <text class="search_title">搜索历史</text>
+    <text class="search_title_clear" bindtap="clearHistory">清空历史</text>
+    <view class="search_items">
+      <view class="search_item" wx:if="{{historyValue.length != 0}}" wx:for="{{historyValue}}" wx:key="id">{{historyValue[index]}}</view>
+      <view class="search_item" wx:if="{{historyValue.length == 0}}">无</view>
+    </view>
+  </view>
+</view>

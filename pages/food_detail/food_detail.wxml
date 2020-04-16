@@ -11,13 +11,7 @@
       <view class="name" wx:if="{{foodDetailData.name}}">{{foodDetailData.name}}</view>
       <view class="name" wx:if="{{!foodDetailData.name && show}}">抱歉，未找到相关菜品的信息</view>
       <view class="tag" wx:if="{{foodDetailData.tag}}">
-        <view class="tag_item">母亲节</view>
-        <view class="tag_item">夏季</view>
-        <view class="tag_item">早餐</view>
-        <view class="tag_item">清热解毒</view>
-        <view class="tag_item">烙</view>
-        <view class="tag_item">电饼档</view>
-        <view class="tag_item">面食</view>
+        <view class="tag_item" wx:for="{{foodDetailData.tag}}" wx:key="id">{{foodDetailData.tag[index]}}</view>
       </view>
       <view class="content">
         {{foodDetailData.content}}

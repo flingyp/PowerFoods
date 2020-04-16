@@ -105,3 +105,4 @@ export const getMenusDetailData = function(url,classid,appkey,start, num) {
     })
   })
 }
+
