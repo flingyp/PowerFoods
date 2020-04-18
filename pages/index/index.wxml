@@ -54,7 +54,6 @@
           热门标签
           <iconfont class="remen1" name="remen1"></iconfont>
         </view>
-        <view class="more">查看更多>></view>
     </view>
     <view class="hot_items">
         <scroll-view class="hot_image" scroll-x>

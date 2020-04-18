@@ -92,3 +92,29 @@
   text-align: center;
   font-size: 24rpx;
 }
+.container .shareCollect {
+  position: fixed;
+  right: 2%;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+.container .share,
+.container .collect {
+  width: 110rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rpx;
+  background-color: rgba(99, 110, 114, 0.5);
+  border-radius: 20rpx;
+  margin: 30rpx 0;
+}
+.container .share button,
+.container .collect button {
+  width: 100%;
+  font-size: 24rpx;
+  color: #fff;
+  margin-top: 4rpx;
+}

@@ -17,42 +17,16 @@
     <view class="user_collect">
       <view class="collect">我的菜谱</view>
       <view class="collect_items">
-        <view class="collect_item">
-          <view class="item_img">
-            <image src="https://i1.douguo.com/upload/banner/2/1/3/21cb7c3c389286d00cd63c01cc01fd33.jpg"></image>
+        <view class="collect_item" wx:for="{{foodDetail}}" wx:key="id">
+          <view class="item_img" bindtap="goFoodDetail" data-item="{{foodDetail[index]}}">
+            <image src="{{foodDetail[index].imgage}}"></image>
           </view>
           <view class="item_introduce">
             <view class="item_name">
-              当归滋补羊肉汤
+              {{foodDetail[index].name}}
             </view>
             <view class="item_content">
-              冬天冷的时候那段时间总是手脚冰凉冬天冷的时候那段时间总是手脚冰凉
-            </view>            
-          </view>
-        </view>
-        <view class="collect_item">
-          <view class="item_img">
-            <image src="https://i1.douguo.com/upload/banner/2/1/3/21cb7c3c389286d00cd63c01cc01fd33.jpg"></image>
-          </view>
-          <view class="item_introduce">
-            <view class="item_name">
-              当归滋补羊肉汤
-            </view>
-            <view class="item_content">
-              冬天冷的时候那段时间总是手脚冰凉冬天冷的时候那段时间总是手脚冰凉
-            </view>            
-          </view>
-        </view>
-        <view class="collect_item">
-          <view class="item_img">
-            <image src="https://i1.douguo.com/upload/banner/2/1/3/21cb7c3c389286d00cd63c01cc01fd33.jpg"></image>
-          </view>
-          <view class="item_introduce">
-            <view class="item_name">
-              当归滋补羊肉汤
-            </view>
-            <view class="item_content">
-              冬天冷的时候那段时间总是手脚冰凉冬天冷的时候那段时间总是手脚冰凉
+              {{foodDetail[index].content}}
             </view>            
           </view>
         </view>

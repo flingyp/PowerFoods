@@ -32,7 +32,9 @@ Page({
           tag: data.tag,
           content: data.cookstory,
           material: data.major,
-          process: data.cookstep
+          process: data.cookstep,
+          collect: false,
+          id: id
         }
         const foodDetailData = createFoodDetail(item)
         wx.hideLoading()
@@ -42,6 +44,8 @@ Page({
         wx.setNavigationBarTitle({
           title: this.data.foodDetailData.name
        })
+        // 检查本地缓存中是否收藏此菜品
+        this.getLocalCollect()
       } else {
         console.log('菜谱审核中')
         wx.hideLoading()
@@ -51,11 +55,73 @@ Page({
       }
     })
   },
+  goCollect() {
+    // 改变 foodDetailData.inCollect 的值 时 收藏 和 已收藏 来回切换
+    let collect = 'foodDetailData.ifCollect'
+    this.setData({
+      [collect]: !this.data.foodDetailData.ifCollect
+    })
+    if(this.data.foodDetailData.ifCollect) {
+      wx.showToast({
+        title: '已收藏',
+        icon: 'success',
+        duration: 500
+      })
+      // 将需要收藏的数据 foodDetailData 保存到本地缓存中
+      const foodDetail = wx.getStorageSync('foodDetail')
+      if(!foodDetail) {
+        let foodDetail = []
+        foodDetail.push(this.data.foodDetailData)
+        wx.setStorageSync('foodDetail', foodDetail)
+      } else {
+        foodDetail.push(this.data.foodDetailData)
+        wx.setStorageSync('foodDetail', foodDetail)
+      }
+    } else if(!this.data.foodDetailData.ifCollect) {
+      wx.showToast({
+        title: '取消收藏',
+        duration: 500
+      })
+      const foodDetail = wx.getStorageSync('foodDetail')
+      foodDetail.map((item,index) => {
+        if(item.id == this.data.foodDetailData.id) {
+          foodDetail.splice(index,1)
+        }
+      })
+      wx.setStorageSync('foodDetail', foodDetail)
+    }
+  },
+  // 判断 该 菜品再本地缓存中是否收藏
+  getLocalCollect() {
+    const foodDetail = wx.getStorageSync('foodDetail')
+    if(!foodDetail) {
+      return
+    } else {
+      // 菜谱id
+      const id = this.data.foodDetailData.id
+      console.log(id)
+      for(let item of foodDetail) {
+        if(item.id === id) {
+          // 改变 foodDetailData.inCollect 的值 时 收藏 和 已收藏 来回切换
+          let collect = 'foodDetailData.ifCollect'
+          this.setData({
+            [collect]: true
+          })
+        }
+      }
+    }
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 如果是从 我的页面 收藏 入口过来的  api ==  3
+    if(options.item && options.api == 3) {
+      this.setData({
+        foodDetailData: JSON.parse(options.item)
+      })
+    } 
     // 轮播图 热门标签 猜你喜欢 传递过来的id 值 通过 options 可以 页面参数 id
     this.setData({
       id: options.id
@@ -70,6 +136,7 @@ Page({
       this.food_detail_data(url, this.data.id)
     } else if(options.api == 2) {
       let item = JSON.parse(options.item)
+      // console.log(item)
       item.material.forEach(item1 => {
         for(let key in item1) {
           if(key === 'mname') {
@@ -86,9 +153,12 @@ Page({
       })
       const newtag = item.tag.split(",")
       item.tag = newtag
+      item.ifCollect = false
       this.setData({
         foodDetailData: item
       })
+      // 检查本地缓存中是否收藏此菜品
+      this.getLocalCollect()
     }
   },
 
@@ -96,7 +166,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
   },
 
   /**

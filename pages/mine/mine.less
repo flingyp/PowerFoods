@@ -66,30 +66,35 @@
           margin: 45rpx 0;
 
           .item_img {
-            flex: 1;
 
             image {
-              width: 100%;
+              width: 300rpx;
               height: 200rpx;
               border-radius: 20rpx;
             }
           }
 
           .item_introduce {
-            flex: 2;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-between;
             padding: 0 10rpx;
 
-            .item_name {}
+            .item_name {
+              width: 380rpx;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
 
             .item_content {
+              // flex: 1;
               font-size: @smallFontSize;
               letter-spacing: 4rpx;
               display: -webkit-box;
-              -webkit-line-clamp: 2;
+              -webkit-line-clamp: 5;
               -webkit-box-orient: vertical;
+              overflow: hidden;
             }
           }
         }

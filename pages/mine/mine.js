@@ -8,7 +8,9 @@ Page({
     // 控制 未登录 和 登录 的显示隐藏
     show: false,
     // 用户信息
-    info: {}
+    info: {},
+    // 用户收藏的菜品数据
+    foodDetail: []
   },
   // 点击登录按钮 获取用户信息 bindgetuserinfo="getUserInfo"  open-type="getUserInfo" 使用
   getUserInfo(e) {
@@ -41,12 +43,19 @@ Page({
       }
     }
   },
+  // 跳转到 food_detail 页面
+  goFoodDetail(e) {
+    const item = JSON.stringify(e.currentTarget.dataset.item)
+    wx.navigateTo({
+      url: `/pages/food_detail/food_detail?item=${item}&api=3`
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -73,9 +82,11 @@ Page({
       this.setData({
         show: true
       })
+      // 获取 用户收藏的菜品数据
       // 获取 用户登录的信息 info  并且将信息渲染再页面上
       this.setData({
-        info
+        info,
+        foodDetail: wx.getStorageSync('foodDetail')
       })
     }
   },

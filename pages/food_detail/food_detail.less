@@ -40,7 +40,7 @@
         text-align: center;
         border: 1px solid rgb(255, 118, 117);
         border-radius: 20rpx;
-        padding:6rpx 10rpx;
+        padding: 6rpx 10rpx;
         margin: 0 6rpx;
       }
     }
@@ -52,22 +52,26 @@
   }
 
   // 食物材料
-  .food_material{
+  .food_material {
     display: flex;
     flex-direction: column;
     padding: 30rpx 10rpx;
     border-bottom: 10rpx solid rgb(99, 110, 114);
-    .material{
+
+    .material {
       font-weight: 700;
       font-size: @bigFontSize;
       letter-spacing: 2rpx;
       text-align: center;
     }
-    .material_items{
-      .material_item{
+
+    .material_items {
+      .material_item {
         display: flex;
         padding: 8rpx;
-        .name,.amount{
+
+        .name,
+        .amount {
           font-size: @smallFontSize;
           color: rgb(99, 110, 114);
         }
@@ -75,39 +79,76 @@
     }
   }
 
-  .food_process{
+  // 食物步骤
+  .food_process {
     display: flex;
     flex-direction: column;
     padding: 30rpx 10rpx;
-    .process_title{
+
+    .process_title {
       font-weight: 700;
       font-size: @bigFontSize;
       letter-spacing: 2rpx;
       text-align: center;
     }
-    .process_items{
+
+    .process_items {
       width: 90%;
-      margin:0 auto;
-      .process_item{
+      margin: 0 auto;
+
+      .process_item {
         width: 100%;
         padding: 20rpx 0;
-        .item_num{
+
+        .item_num {
           padding-bottom: 20rpx;
-          color:rgb(241, 144, 102);
+          color: rgb(241, 144, 102);
           font-weight: bolder;
         }
-        .item_img{
+
+        .item_img {
           padding-bottom: 20rpx;
-          image{
+
+          image {
             width: 100%;
             border-radius: 10rpx;
           }
         }
-        .item_content{
+
+        .item_content {
           text-align: center;
           font-size: @smallFontSize;
         }
       }
+    }
+  }
+
+  // 分享 收藏按钮
+  .shareCollect {
+    position: fixed;
+    right: 2%;
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+
+  .share,
+  .collect {
+    width: 110rpx;
+    height: 100rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10rpx;
+    background-color: rgba(99, 110, 114, .5);
+    border-radius: 20rpx;
+    margin: 30rpx 0;
+
+    button {
+      width: 100%;
+      font-size: @smallFontSize;
+      color: #fff;
+      margin-top: 4rpx;
     }
   }
 }

@@ -8,15 +8,20 @@
 + 菜单页面的菜谱页面 menu_detail 
 + 菜详情页面   food_detail
 
-### 技术选型
+### 技术栈
 
-+ 微信小程序原生框架
-+ less
++ 微信小程序原生
++ less语法
++ ES6语法
++ Iconfont字体图标库
 
 ### 收获
   + 通过一个简单的小程序来基本的了解微信小程序的相关组件和API的知识
   + 了解微信小程序项目开发的基本流程
   + 为后面微信小程序云开发的了解和使用奠定一定的基础
+
+### 页面效果
+<img src="assets/Img/首页页面.jpg" alt="首页页面" style="zoom:50%;" /><img src="assets/Img/菜单页面.jpg" alt="菜单页面" style="zoom:50%;" /><img src="assets/Img/我的页面.jpg" alt="我的页面" style="zoom:50%;" /><img src="assets/Img/搜索页面.jpg" alt="搜索页面" style="zoom:50%;" /><img src="assets/Img/菜谱页面.jpg" alt="菜谱页面" style="zoom:50%;" /><img src="assets/Img/菜品详情页面.jpg" alt="菜谱详情页面" style="zoom:50%;" />
 
 
 ### 记录一下有用的方法和踩过的坑
@@ -42,24 +47,6 @@
     width: 0;
     height: 0;
     color: transparent;
-  }
-```
-
-*6. 菜详情页数据格式*
-```json
-  {
-    // 菜的图片
-    'imgage': 'xxx',
-    // 菜的名字
-    'name': 'xxx',
-    // 菜的标签
-    'tag': 'xxx',
-    // 菜的内容
-    'content': 'xxx',
-    // 菜的材料
-    'material': 'xxx',
-    // 菜的步骤
-    'process': 'xxx'  
   }
 ```
 
@@ -138,4 +125,88 @@ onShow: function () {
     }
 }
 ```
+
+*8.点击分享功能转发小程序*
+```html
+<!-- 点击分享按钮 时 转发小程序 share	触发用户转发 -->
+<button class="title" size="mini" type="primary" open-type="share" bindtap="goShare">分享</button>
+```
+
+*9.点击收藏切换到已收藏时修改data数据中的对象的值方法*
+```html
+<!-- 收藏 和 已收藏 通过一个变量控制显示和隐藏 点击时就要改变变量的值 true 或 false -->
+<button class="title" size="mini" type="primary" wx:if="{{!foodDetailData.ifCollect}}" bindtap="goCollect">收藏</button>
+<button class="title" size="mini" type="primary" wx:if="{{foodDetailData.ifCollect}}" bindtap="goCollect">已收藏</button>
+```
+```js
+goCollect() {
+  // 改变 foodDetailData.inCollect 的值 时 收藏 和 已收藏 来回切换
+  let collect = 'foodDetailData.ifCollect'
+  this.setData({
+    [collect]: !this.data.foodDetailData.ifCollect
+  })
+},
+```
++ 要改变 foodDetailData 对象 中的其中一个属性的值 可以通过这种方式
++ https://blog.csdn.net/qq_39702981/article/details/86150700?depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-1&utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-1
   
+
+*10.用户收藏的数据使用本地缓存*
+```js
+goCollect() {
+  // 改变 foodDetailData.inCollect 的值 时 收藏 和 已收藏 来回切换
+  let collect = 'foodDetailData.ifCollect'
+  this.setData({
+    [collect]: !this.data.foodDetailData.ifCollect
+  })
+  if(this.data.foodDetailData.ifCollect) {
+    wx.showToast({
+      title: '已收藏',
+      icon: 'success',
+      duration: 500
+    })
+    // 将需要收藏的数据 foodDetailData 保存到本地缓存中
+    const foodDetail = wx.getStorageSync('foodDetail')
+    if(!foodDetail) {
+      let foodDetail = []
+      foodDetail.push(this.data.foodDetailData)
+      wx.setStorageSync('foodDetail', foodDetail)
+    } else {
+      foodDetail.push(this.data.foodDetailData)
+      wx.setStorageSync('foodDetail', foodDetail)
+    }
+  } else if(!this.data.foodDetailData.ifCollect) {
+    wx.showToast({
+      title: '取消收藏',
+      duration: 500
+    })
+    const foodDetail = wx.getStorageSync('foodDetail')
+    foodDetail.map((item,index) => {
+      if(item.id == this.data.foodDetailData.id) {
+        foodDetail.splice(index,1)
+      }
+    })
+    wx.setStorageSync('foodDetail', foodDetail)
+  }
+},
+// 判断 该 菜品再本地缓存中是否收藏
+getLocalCollect() {
+  const foodDetail = wx.getStorageSync('foodDetail')
+  if(!foodDetail) {
+    return
+  } else {
+    // 菜谱id
+    const id = this.data.foodDetailData.id
+    console.log(id)
+    for(let item of foodDetail) {
+      if(item.id === id) {
+        // 改变 foodDetailData.inCollect 的值 时 收藏 和 已收藏 来回切换
+        let collect = 'foodDetailData.ifCollect'
+        this.setData({
+          [collect]: true
+        })
+      }
+    }
+  }
+},
+```

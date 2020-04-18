@@ -42,6 +42,20 @@
         </view>
       </view>
     </view>
+
+    <!-- 分享 和 收藏按钮 -->
+    <view class="shareCollect">
+      <view class="share" bindtap="goShare">
+        <iconfont name="fenxiang"></iconfont>
+        <!-- 点击分享按钮 时 转发小程序 -->
+        <button class="title" size="mini" type="primary" open-type="share" bindtap="goShare">分享</button>
+      </view>
+      <view class="collect">
+        <iconfont name="shoucang1"></iconfont>
+        <button class="title" size="mini" type="primary" wx:if="{{!foodDetailData.ifCollect}}" bindtap="goCollect">收藏</button>
+        <button class="title" size="mini" type="primary" wx:if="{{foodDetailData.ifCollect}}" bindtap="goCollect">已收藏</button>
+      </view>
+    </view>
   </view>
 </view>
 

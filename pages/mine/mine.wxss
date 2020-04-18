@@ -48,27 +48,30 @@
   box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.5);
   margin: 45rpx 0;
 }
-.container .go_login .user_collect .collect_items .collect_item .item_img {
-  flex: 1;
-}
 .container .go_login .user_collect .collect_items .collect_item .item_img image {
-  width: 100%;
+  width: 300rpx;
   height: 200rpx;
   border-radius: 20rpx;
 }
 .container .go_login .user_collect .collect_items .collect_item .item_introduce {
-  flex: 2;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 0 10rpx;
+}
+.container .go_login .user_collect .collect_items .collect_item .item_introduce .item_name {
+  width: 380rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .container .go_login .user_collect .collect_items .collect_item .item_introduce .item_content {
   font-size: 24rpx;
   letter-spacing: 4rpx;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 @keyframes rotate {
   0% {
