@@ -1,0 +1,109 @@
+@smallFontSize: 24rpx;
+@baseFontSize: 32rpx;
+@bigFontSize: 40rpx;
+
+.container {
+  .no_login {
+    margin: 20rpx 40rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    view {
+      font-size: @smallFontSize;
+      margin: 40rpx 0;
+    }
+
+    .user_login {
+      margin: 40rpx 0;
+    }
+  }
+
+  .go_login {
+    .user_message {
+      width: 100vw;
+      background-image: linear-gradient(to right, #ff9569 0%, #e92758 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20rpx 0;
+
+      .user_img {
+        image {
+          width: 150rpx;
+          height: 150rpx;
+          border-radius: 50%;
+          animation: rotate 8s linear 0s infinite normal forwards;
+        }
+      }
+
+      .user_name {
+        color: #fff;
+      }
+
+      .user_address {
+        color: #fff;
+      }
+    }
+
+    .user_collect {
+      margin: 20rpx;
+
+      .collect {
+        font-weight: 700;
+        margin: 20rpx 0;
+      }
+
+      .collect_items {
+        .collect_item {
+          display: flex;
+          justify-content: space-between;
+          padding: 28rpx 10rpx;
+          border: 1px solid rgba(170, 166, 157, 1.0);
+          border-radius: 10rpx;
+          box-shadow: 0 0 20rpx rgba(0, 0, 0, .5);
+          margin: 45rpx 0;
+
+          .item_img {
+            flex: 1;
+
+            image {
+              width: 100%;
+              height: 200rpx;
+              border-radius: 20rpx;
+            }
+          }
+
+          .item_introduce {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 0 10rpx;
+
+            .item_name {}
+
+            .item_content {
+              font-size: @smallFontSize;
+              letter-spacing: 4rpx;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

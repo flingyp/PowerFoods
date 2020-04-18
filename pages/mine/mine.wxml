@@ -1,2 +1,62 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="container">
+  <!-- 未登录的样式 -->
+  <view class="no_login" wx:if="{{!show}}">
+    <view>请登录后查看你收藏的菜品</view>
+    <button class="user_login" type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+  </view>
+  <!-- 登录后的样式 -->
+  <view class="go_login" wx:if="{{show}}">
+    <view class="user_message">
+      <view class="user_img">
+        <image src="{{info.userInfo.avatarUrl}}"></image>
+      </view>
+      <view class="user_name">{{info.userInfo.nickName}}</view>
+      <view class="user_address">{{info.userInfo.city}} {{info.userInfo.province}} {{info.userInfo.country}}</view>
+    </view>
+    <!-- 用户收藏的菜品 -->
+    <view class="user_collect">
+      <view class="collect">我的菜谱</view>
+      <view class="collect_items">
+        <view class="collect_item">
+          <view class="item_img">
+            <image src="https://i1.douguo.com/upload/banner/2/1/3/21cb7c3c389286d00cd63c01cc01fd33.jpg"></image>
+          </view>
+          <view class="item_introduce">
+            <view class="item_name">
+              当归滋补羊肉汤
+            </view>
+            <view class="item_content">
+              冬天冷的时候那段时间总是手脚冰凉冬天冷的时候那段时间总是手脚冰凉
+            </view>            
+          </view>
+        </view>
+        <view class="collect_item">
+          <view class="item_img">
+            <image src="https://i1.douguo.com/upload/banner/2/1/3/21cb7c3c389286d00cd63c01cc01fd33.jpg"></image>
+          </view>
+          <view class="item_introduce">
+            <view class="item_name">
+              当归滋补羊肉汤
+            </view>
+            <view class="item_content">
+              冬天冷的时候那段时间总是手脚冰凉冬天冷的时候那段时间总是手脚冰凉
+            </view>            
+          </view>
+        </view>
+        <view class="collect_item">
+          <view class="item_img">
+            <image src="https://i1.douguo.com/upload/banner/2/1/3/21cb7c3c389286d00cd63c01cc01fd33.jpg"></image>
+          </view>
+          <view class="item_introduce">
+            <view class="item_name">
+              当归滋补羊肉汤
+            </view>
+            <view class="item_content">
+              冬天冷的时候那段时间总是手脚冰凉冬天冷的时候那段时间总是手脚冰凉
+            </view>            
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

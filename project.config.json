@@ -88,6 +88,13 @@
 					"id": -1,
 					"name": "搜索页面",
 					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的页面",
+					"pathName": "pages/mine/mine",
 					"scene": null
 				}
 			]

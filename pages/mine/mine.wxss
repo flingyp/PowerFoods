@@ -1,1 +1,80 @@
-/* pages/mine/mine.wxss */
+.container .no_login {
+  margin: 20rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .no_login view {
+  font-size: 24rpx;
+  margin: 40rpx 0;
+}
+.container .no_login .user_login {
+  margin: 40rpx 0;
+}
+.container .go_login .user_message {
+  width: 100vw;
+  background-image: linear-gradient(to right, #ff9569 0%, #e92758 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.container .go_login .user_message .user_img image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  animation: rotate 8s linear 0s infinite normal forwards;
+}
+.container .go_login .user_message .user_name {
+  color: #fff;
+}
+.container .go_login .user_message .user_address {
+  color: #fff;
+}
+.container .go_login .user_collect {
+  margin: 20rpx;
+}
+.container .go_login .user_collect .collect {
+  font-weight: 700;
+  margin: 20rpx 0;
+}
+.container .go_login .user_collect .collect_items .collect_item {
+  display: flex;
+  justify-content: space-between;
+  padding: 28rpx 10rpx;
+  border: 1px solid #aaa69d;
+  border-radius: 10rpx;
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.5);
+  margin: 45rpx 0;
+}
+.container .go_login .user_collect .collect_items .collect_item .item_img {
+  flex: 1;
+}
+.container .go_login .user_collect .collect_items .collect_item .item_img image {
+  width: 100%;
+  height: 200rpx;
+  border-radius: 20rpx;
+}
+.container .go_login .user_collect .collect_items .collect_item .item_introduce {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 10rpx;
+}
+.container .go_login .user_collect .collect_items .collect_item .item_introduce .item_content {
+  font-size: 24rpx;
+  letter-spacing: 4rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
